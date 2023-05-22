@@ -1,0 +1,173 @@
+:root {
+    font-size: 20px;
+    --primary: #0838b4;
+    --secondary: #052577;
+    --color: #f0f0f0;
+    --container-size: 400px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    color: var(--color);
+    font-family: sans-serif;
+    background: #1b1b26;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+
+.main > .center {
+    display: flex;
+    justify-content: center;
+}
+
+.playerIconHeader {
+    margin-bottom: 1rem;
+    margin-top: 2.65rem;
+    padding: 0 3em;
+    gap: 0.8em;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.playerIconHeader .icon {
+    width: auto;
+    height: 164px;
+    border-radius: 1em;
+    /* aspect-ratio: 1 / 1; */
+}
+
+
+.playerIconHeader .link {
+    width: fit-content;
+    padding: 0.5em 0.6em;
+    font-weight: bold;
+    border-radius: 1.5em;
+    background: var(--secondary);
+    border: var(--primary) 5px solid;
+}
+
+.selectView {
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    outline: var(--primary) 4px solid;
+    --rouding:1.2em;
+    overflow: hidden;
+    border-radius: var(--rouding);
+    cursor: pointer;
+}
+
+.selectView .button {
+    font-weight: bold;
+    padding: 0.8em 1.5em;
+    color: var(--color);
+    border-radius: var(--rouding);
+}
+
+.selectView .button.focus {
+    background: var(--primary);
+
+    transition: 300ms ease-in-out;
+}
+
+
+.main {
+    position: relative;
+    top: 2em;
+    display: flex;
+    flex-direction: column;
+}
+
+.main > .container {
+    margin-top: 1.25em;
+}
+
+.main > .takymain > div > .title {
+    width: 100%;
+    text-align: center;
+    font-size: 1.65em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.main > .takymain > div > .title > span {
+    border-bottom: var(--primary) 4px solid;
+}
+
+.vlastnosti {
+    place-items: center;
+    place-content: center;
+    gap: 0.5em 3em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.statistiky {
+    border: var(--primary) 4px solid;
+    border-radius: 0.6em;
+    padding: 0.75em;
+    display: flex;
+    gap: 0.5em;
+    flex-direction: column;
+    min-width: var(--container-size);
+    max-height: var(--container-size);
+    overflow-y: auto;
+}
+
+.statistiky .item {
+    font-weight: bold;
+    border-bottom: var(--primary) 4px solid;
+    padding: 0.15em;
+}
+
+.vlastnosti .item {
+    /* justify-content: center; */
+    align-items: center;
+    display:flex;
+    flex-direction: row;
+    gap: 0.5rem 0.25em;
+    font-size: 1.4em;
+}
+
+
+.vlastnosti .item .icon {
+    position: relative;
+    width: 2.45em;
+    border-radius: 0.5em;
+    height: 2.5em !important;
+    padding: 0.2em;
+    border: var(--secondary) 4px solid;
+}
+
+.vlastnosti .item .value {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.takymain {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5em;
+    margin-top: 2em;
+}
+
+@media (min-width: 700px) and (max-width: 1300px) {
+    :root {
+        font-size: 19px;
+        --container-size: 300px;
+    }
+}
+
+@media (max-width: 1050px) {
+    .takymain {
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
